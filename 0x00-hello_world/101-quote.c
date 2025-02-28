@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <unistd.h>
+#include <string.h>
 
 /**
  * main - prints to stderr
@@ -8,8 +10,8 @@
  */
 int main(void)
 {
-	char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	fprintf(stderr, "%s\n", str);
+	write(2, str, strlen(str));
 	return (1);
 }
