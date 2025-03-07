@@ -8,20 +8,19 @@
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int c;
+	long int a = 1;
+	long int b = 2;
+	long int c;
 	int n = 0;
 
 
-	while (n < 50)
+	printf("%ld, %ld", a, b);
+	while (n < 48)
 	{
-		if (a == 1 && b == 2)
-			printf("%d, %d", a, b);
 		c = a + b;
 		a = b;
 		b = c;
-		printf(", %d", c);
+		printf(", %ld", c);
 		n++;
 	}
 	printf("\n");
