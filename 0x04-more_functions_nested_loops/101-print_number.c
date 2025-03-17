@@ -9,27 +9,29 @@
  */
 void print_number(int n)
 {
+	int div = 1;
+	unsigned int num;
+
+	/* checks if int is negative */
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num = -n;
 	}
-	if (n <= 9)
+	else
 	{
-		_putchar('0' + n);
+		num = n;
 	}
-	if (n > 9 && n < 100)
+	/* finds largest divisor */
+	while ((num / div) >= 10)
 	{
-		_putchar('0' + (n / 10)), _putchar('0' + (n % 10));
+		div *= 10;
 	}
-	if (n > 99 && n < 1000)
+	/* prints each digit one by one */
+	while (div > 0)
 	{
-		_putchar('0' + (n / 100)), _putchar('0' + ((n / 10) % 10));
-		_putchar('0' + (n % 10));
-	}
-	if (n > 999)
-	{
-		_putchar('0' + (n / 1000)), _putchar('0' + ((n / 100) % 10));
-		_putchar('0' + ((n / 10) % 10)), _putchar('0' + (n % 10));
+		_putchar('0' + (num / div));
+		num %= div;
+		div /= 10;
 	}
 }
