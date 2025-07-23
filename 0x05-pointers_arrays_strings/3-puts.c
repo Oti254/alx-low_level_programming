@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 
 /**
  * _puts - prints string followed by new line to stdout
@@ -11,6 +11,12 @@
  */
 void _puts(char *str)
 {
-	fputs(str, stdout);
-	fputc('\n', stdout);
+	int length = 0;
+
+	while (str[length] != '\0')
+	{
+		putchar(str[length]);
+		length++;
+	}
+	putchar('\n');
 }
