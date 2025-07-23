@@ -18,6 +18,5 @@ void _puts(char *str)
 		length++;
 	}
 	write(1, str, length);
-	write(1, "\n", length);
-
+	write(1, "\n", 1);
 }
