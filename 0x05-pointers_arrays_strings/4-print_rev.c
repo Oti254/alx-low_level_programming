@@ -19,7 +19,7 @@ void print_rev(char *s)
 		length++;
 	}
 
-	len = length;
+	len = length - 1;
 	while (len >= 0)
 	{
 		write(1, &s[len], 1);
