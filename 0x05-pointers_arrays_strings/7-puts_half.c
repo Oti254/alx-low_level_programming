@@ -22,20 +22,15 @@ void puts_half(char *str)
 	if (length_of_the_string % 2 == 0)
 	{
 		n = (length_of_the_string / 2);
-		while (n <= length_of_the_string - 1)
-		{
-			write(1, &str[n], 1);
-			n++;
-		}
 	}
 	else
 	{
 		n = (length_of_the_string - 1) / 2;
-		while (n <= length_of_the_string - 1)
-		{
-			write(1, &str[n], 1);
-			n++;
-		}
+	}
+	while (str[n] != '\0')
+	{
+		write(1, &str[n], 1);
+		n++;
 	}
 	write(1, "\n", 1);
 }
