@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * puts2 - prints every other character in a string
@@ -20,8 +21,8 @@ void puts2(char *str)
 
 	while (index < len + 1)
 	{
-		putchar(str[index]);
+		write(1, &str[index], 1);
 		index = index + 2;
 	}
-	putchar('\n');
+	write(1, "\n", 1);
 }
