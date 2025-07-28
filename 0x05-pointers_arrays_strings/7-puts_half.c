@@ -19,10 +19,10 @@ void puts_half(char *str)
 		length_of_the_string++;
 	}
 
-	if (length_of_the_string % 2 != 0)
+	if (length_of_the_string % 2 == 0)
 	{
-		n = (length_of_the_string - 1) / 2;
-		while (n < length_of_the_string)
+		n = (length_of_the_string / 2);
+		while (n <= length_of_the_string - 1)
 		{
 			write(1, &str[n], 1);
 			n++;
@@ -30,8 +30,8 @@ void puts_half(char *str)
 	}
 	else
 	{
-		n = (length_of_the_string / 2);
-		while (n < length_of_the_string)
+		n = (length_of_the_string - 1) / 2;
+		while (n <= length_of_the_string - 1)
 		{
 			write(1, &str[n], 1);
 			n++;
