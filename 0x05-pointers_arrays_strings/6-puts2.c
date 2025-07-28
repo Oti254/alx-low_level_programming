@@ -19,7 +19,7 @@ void puts2(char *str)
 		len++;
 	}
 
-	while (index < len + 1)
+	while (index < len)
 	{
 		write(1, &str[index], 1);
 		index = index + 2;
