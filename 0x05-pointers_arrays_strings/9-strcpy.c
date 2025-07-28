@@ -18,12 +18,11 @@ char *_strcpy(char *dest, char *src)
 	{
 		len++;
 	}
-	
 	while (i < len)
 	{
 		dest[i] = src[i];
 		i++;
 	}
-
-	return(dest);
+	dest[len] = '\0';
+	return (dest);
 }
